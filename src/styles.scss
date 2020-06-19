@@ -1,1 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+html,
+body {
+  font-family: "Roboto";
+  margin: 0;
+  box-sizing: border-box;
+}
+
+// Dropdown
+.dropdown {
+  position: relative;
+  display: inline-block;
+  border: solid 1px #e7305b;
+  border-radius: 8px;
+  padding: 8px;
+  color: #e7305b;
+  cursor: pointer;
+  z-index: 99999 !important;
+}

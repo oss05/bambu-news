@@ -121,8 +121,16 @@
               "devServerTarget": "bambu-mobile:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {}
         }
       }
-    }},
-  "defaultProject": "bambu-mobile"
+    }
+  },
+  "defaultProject": "bambu-mobile",
+  "cli": {
+    "analytics": "abc76211-2897-4c7f-b4b7-b3a81031be2c"
+  }
 }

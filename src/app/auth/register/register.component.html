@@ -1,0 +1,47 @@
+<main
+  class="login-signup-container d-flex justify-content-center align-items-center"
+>
+  <div class="box">
+    <div id="header">
+      <div id="cont-lock">
+        <i class="material-icons lock">Join to News</i>
+      </div>
+      <div id="bottom-head"><h1 id="logintoregister">Sign up</h1></div>
+    </div>
+    <form [formGroup]="registerForm" (ngSubmit)="onRegister()">
+      <div class="group">
+        <input
+          class="inputMaterial"
+          type="text"
+          required
+          formControlName="email"
+        />
+        <span class="highlight"></span>
+        <span class="bar"></span>
+        <label>Email</label>
+      </div>
+      <div class="group">
+        <input
+          class="inputMaterial"
+          type="password"
+          required
+          formControlName="password"
+        />
+        <span class="highlight"></span>
+        <span class="bar"></span>
+        <label>Password</label>
+      </div>
+      <button id="buttonlogintoregister" type="submit">Sign up</button>
+    </form>
+    <div
+      id="footer-box"
+      class="d-flex justify-content-center align-items-center"
+    >
+      <p class="footer-text">
+        Already a member?<span class="sign-up" [routerLink]="['/login']">
+          Login</span
+        >
+      </p>
+    </div>
+  </div>
+</main>

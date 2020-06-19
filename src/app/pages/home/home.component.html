@@ -1,0 +1,48 @@
+<main class="home-main">
+  <section class="container">
+    <article class="row justify-content-center justify-content-md-end mr-4">
+      <div class="dropdown mx-1">
+        <span>Categories</span>
+        <div class="dropdown-content">
+          <p (click)="getAllNews('mx')">all</p>
+          <div *ngFor="let category of categories">
+            <p (click)="getCategory(category)">{{category}}</p>
+          </div>
+        </div>
+      </div>
+      <div class="dropdown mx-1">
+        <span>Countries</span>
+        <div class="dropdown-content">
+          <div *ngFor="let country of countries">
+            <p (click)="getCountry(country.code)">{{country.name}}</p>
+          </div>
+        </div>
+      </div>
+    </article>
+  </section>
+  <!-- <app-card></app-card> -->
+  <main class="container my-3">
+    <section class="row justify-content-around">
+      <article
+        *ngFor="let article of articles"
+        class="custom-card card mb-3 mb-md-4 mb-lg-5"
+        style="width: 21rem;"
+      >
+        <img
+          [src]="article.urlToImage"
+          class="card-img-top"
+          [alt]="article.title"
+        />
+        <div class="custom-card-body card-body d-flex flex-column">
+          <h5 class="card-title" tooltip="{{ article.title }}">
+            {{ article.title | truncate }}
+          </h5>
+          <p class="card-text pr-1">{{ article.description }}</p>
+          <a [href]="article.url" target="_blank" class="btn custom-button"
+            >Ver nota</a
+          >
+        </div>
+      </article>
+    </section>
+  </main>
+</main>

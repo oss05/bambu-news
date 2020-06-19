@@ -1,0 +1,33 @@
+<nav class="nav fixed-top d-flex justify-content-between px-lg-4">
+  <input type="checkbox" id="nav-check" />
+  <section class="nav-btn mt-3">
+    <label for="nav-check">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+  </section>
+  
+  <section class="nav-header">
+    <div class="nav-title">
+      <img src="../../../assets/img/logo.png" alt="Bambu Mobile Logo" />
+    </div>
+  </section>
+  <section class="d-none d-lg-flex align-items-center">
+    <h1>News</h1>
+  </section>
+  <section class="nav-links d-flex align-items-center" *ngIf="user$ | async as user; else login">
+    <p style="display: inline;" class="mx-3 my-0">{{ user.email }}</p>
+    <a (click)="onLogOut()"> Salir</a>
+  </section>
+  <ng-template #login>
+    <section class="nav-links d-flex align-items-center">
+      <a [routerLink]="['/login']" 
+        >Login</a
+      >
+      <a [routerLink]="['/register']" 
+        >Register</a
+      >
+    </section>
+  </ng-template>
+</nav>

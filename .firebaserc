@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "bambu-login-278a5": {
+      "hosting": {
+        "bambu-mobile": [
+          "bambu-login-278a5"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "bambu-login-278a5"
+  }
+}
