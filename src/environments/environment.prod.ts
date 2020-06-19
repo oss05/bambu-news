@@ -1,6 +1,6 @@
 export const environment = {
   production: true,
-  baseUrl: 'http://newsapi.org/v2/top-headlines?',
+  baseUrl: 'https://newsapi.org/v2/top-headlines?',
   firebaseConfig: {
     apiKey: "AIzaSyAez3GmLBI3Ylr-5UoGwP4gyQIZzyzVv-8",
     authDomain: "bambu-login-278a5.firebaseapp.com",
